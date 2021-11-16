@@ -1,0 +1,834 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap");
+
+:root {
+  --main-color: #dd2f6e;
+  --color-dark: #1d2231;
+  --text-grey: #8390a2;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  list-style: none;
+  text-decoration: none;
+  font-family: "Poppins", sans-serif;
+  overflow: hidden;
+}
+
+.sidebar {
+  width: 345px;
+  background: var(--main-color);
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  z-index: 100;
+}
+
+.sidebar-logo {
+  height: 100px;
+  padding: 1rem 0rem 1rem 2rem;
+  color: #fff;
+}
+
+.sidebar-logo span {
+  display: inline-block;
+  padding-right: 1rem;
+}
+
+.sidebar-menu {
+  margin-top: 1rem;
+}
+
+.sidebar-menu li {
+  width: 100%;
+  margin-bottom: 1rem;
+  padding-left: 1rem;
+}
+
+.sidebar-menu a {
+  padding-left: 1rem;
+  font-size: 1.2rem;
+  display: block;
+  color: #fff;
+}
+
+.sidebar-menu a span:first-child {
+  font-size: 1.5rem;
+  padding-right: 1rem;
+}
+
+.sidebar-menu a.active {
+  background: #fff;
+  color: var(--main-color);
+  padding: 1rem 0 1rem 1rem;
+  border-radius: 30px 0 0 30px;
+}
+
+.main-content {
+  margin-left: 345px;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem 1.5rem;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+  position: fixed;
+  top: 0;
+  left: 345px;
+  width: calc(100% - 345px);
+  background: #fff;
+  z-index: 100;
+}
+
+.header h2 {
+  color: #222;
+}
+
+.header label span {
+  font-size: 1.7rem;
+  padding-right: 1rem;
+}
+
+.search-wrapper {
+  border: 1px solid #ccc;
+  border-radius: 30px;
+  height: 50px;
+  width: 300px;
+  display: flex;
+  align-items: center;
+  overflow-x: hidden;
+}
+
+.search-wrapper span {
+  display: inline-block;
+  padding: 0 1rem;
+  font-size: 1.5rem;
+}
+
+.search-wrapper input {
+  border: none;
+  outline: none;
+  width: 100%;
+  padding: 0.5rem;
+  background: none;
+}
+
+.user-wrapper {
+  display: flex;
+  align-items: center;
+}
+
+.user-wrapper img {
+  border-radius: 50%;
+  margin-right: 1rem;
+}
+
+.user-wrapper small {
+  display: inline-block;
+  color: var(--text-grey);
+}
+
+.user-settings {
+  display: none;
+  position: fixed;
+  top: 7%;
+  right: 2%;
+  z-index: 100;
+  background: var(--main-color);
+  padding: 0.5rem 1.5rem;
+  border-radius: 8px;
+}
+
+.user-settings a {
+  color: #fff;
+}
+
+main {
+  margin-top: 85px;
+  padding: 2rem 1.5rem;
+  background: #f1f5f9;
+  min-height: calc(100vh - 85px);
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2rem;
+  margin-bottom: 1rem;
+}
+
+.card-single {
+  display: flex;
+  justify-content: space-between;
+  background: #fff;
+  padding: 2rem;
+  border-radius: 2px;
+}
+
+.card-single h4 {
+  font-size: 2rem;
+}
+
+.card-single div span:nth-child(2) {
+  color: var(--text-grey);
+}
+.card-single div span:first-child {
+  font-size: 3rem;
+  color: var(--main-color);
+}
+
+.show {
+  display: block !important;
+}
+
+.dashboard-content,
+.attendance-content,
+.students-content,
+.quiz-content,
+.grade-content {
+  display: none;
+}
+
+.searchAdd {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 14.2rem;
+}
+
+.addNewStudentBtn {
+  background: var(--main-color);
+  color: #fff;
+  padding: 0.8rem 1.5rem;
+  border-radius: 30px;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+  margin: auto;
+}
+
+.table {
+  margin-top: 1rem;
+  font-size: 1.5rem;
+  text-align: center;
+  z-index: 1;
+  overflow-y: scroll;
+  height: 700px;
+}
+
+.actionDiv
+
+/* .tableBody {
+  overflow-y: scroll;
+  height: 700px;
+} */
+
+table tr th,
+table tr td {
+  padding: 0 1rem;
+}
+
+table tr th {
+  font-size: 1.5rem;
+  background: var(--main-color);
+  color: #fff;
+  padding: 1rem 2rem;
+}
+table tr td {
+  font-size: 1.8rem;
+  padding-top: 1rem;
+}
+
+table td img {
+  border-radius: 30%;
+}
+
+.view {
+  font-size: 1rem;
+  display: block;
+}
+
+.eye-logo {
+  display: inline-block;
+}
+
+/* Login Page */
+.login-page {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+}
+
+.left {
+  background: var(--main-color);
+  color: #fff;
+  min-height: 100vh;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  text-align: center;
+}
+
+.left header span {
+  font-size: 2rem;
+}
+
+.right {
+  background: #f1f5f9;
+  padding: 2rem 4rem;
+}
+
+.loginDiv {
+  width: 60%;
+  margin: 20% auto;
+}
+
+.loginDiv form {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+.dataInput {
+  padding: 0.6rem 1rem;
+  border-radius: 5px;
+  margin: 0.5rem 0;
+  font-size: 1.2rem;
+  border: 1px solid #000;
+}
+
+hr {
+  width: 100%;
+}
+
+a {
+  text-decoration: none;
+  color: #000;
+}
+
+.loginBtn {
+  color: #fff;
+  background: rgb(31, 187, 235);
+  border: none;
+  margin: 0.5rem 0;
+}
+.createAcctBtn {
+  color: #fff;
+  background: rgb(65, 235, 31);
+  border: none;
+  margin-top: 2rem;
+}
+
+.remember {
+  text-align: left;
+  margin: 0.5rem 0;
+}
+
+.remember label {
+  margin-left: 1rem;
+}
+
+/* Modal  */
+.addStudentModal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background: rgba(0, 0, 0, 0.3);
+}
+
+.viewStudentModal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background: rgba(0, 0, 0, 0.3);
+}
+
+.modalContent {
+  padding: 1rem;
+  width: 55.5%;
+  margin: 14% 590px;
+  background: #f4f4f4;
+  box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.2), 0 7px 20px 0 rgba(0, 0, 0, 0.2);
+}
+
+.grid {
+  display: grid;
+  gap: 1rem;
+}
+
+.grid-3 {
+  grid-template-columns: 1.5fr 2fr 2fr;
+}
+
+.upperActionDiv {
+  display: flex;
+  justify-content: space-between;
+}
+.lowerActionDiv {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 1rem;
+}
+
+.modalTitle {
+  font-size: 1.5rem;
+  padding-left: 1rem;
+}
+
+.closeModalBtn .imageDiv,
+.primaryInfoDiv,
+.secondaryInfoDiv {
+  padding: 0.5rem;
+}
+
+.flex {
+  display: flex;
+  flex-direction: column;
+}
+
+.inputData {
+  margin: 5px 0;
+  padding: 0.5rem 0.8rem;
+  font-size: 1.2rem;
+  width: 100%;
+}
+
+textarea {
+  margin: 5px 0;
+  padding: 0.5rem 0.8rem;
+  font-size: 1.2rem;
+  width: 100%;
+}
+
+.adviser {
+  text-align: center;
+  margin-top: 1rem;
+}
+
+.imageDiv {
+  text-align: center;
+  margin-top: 0.5rem;
+}
+
+.imageDiv img {
+  width: 100%;
+  height: 300px;
+  margin: auto;
+}
+
+.ID {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 0.5rem;
+  font-size: 1.2rem;
+}
+
+.inputFile {
+  margin-top: 0.5rem;
+}
+
+.generateID {
+  background: rgb(31, 187, 235);
+  padding: 0.5rem 0.8rem;
+  color: #fff;
+  cursor: pointer;
+}
+
+.studentImageTable {
+  width: 150px;
+}
+
+.cursor {
+  cursor: pointer;
+}
+
+.closeModalBtn {
+  background: red;
+  color: #fff;
+  padding: 5px 10px;
+  border-radius: 10px;
+}
+
+.submitBtn {
+  background: rgb(7, 223, 252);
+  color: #fff;
+  padding: 0.5rem 1.2rem;
+  border: none;
+  font-size: 1.2rem;
+}
+
+.btn {
+  border: none;
+  cursor: pointer;
+  padding: 0.7rem 1.2rem;
+  font-size: 1.2rem;
+}
+.editBtn {
+  background: rgb(38, 231, 48);
+  color: #fff;
+  margin-right: 1rem;
+}
+
+.deleteBtn {
+  background: rgb(241, 37, 37);
+  color: #fff;
+}
+
+#loginForm {
+  padding-top: 2rem;
+}
+
+.messageDiv {
+  background: rgb(238, 54, 54);
+  color: #fff;
+  text-align: center;
+  padding: 1rem 1rem;
+  display: block;
+  opacity: 0;
+}
+
+.confirmationDiv {
+  position: absolute;
+  top: 12%;
+  left: 50%;
+  width: 290px;
+  padding: 1rem;
+  height: auto;
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+  background: #f4f4f4;
+  z-index: 100;
+  opacity: 0;
+}
+.cbtn {
+  display: flex;
+  justify-content: center;
+}
+
+.confirmBtn {
+  background: var(--main-color);
+  color: #fff;
+  padding: 0.1rem 1rem;
+  border-radius: 10px;
+  display: inline-block;
+  justify-self: flex-end;
+  margin-top: 0.5rem;
+}
+
+.dcbtn {
+  margin-top: 1rem;
+}
+
+.yesBtn {
+  background: red;
+  color: #fff;
+  padding: 0.1rem 1rem;
+  border-radius: 10px;
+  display: inline-block;
+  justify-self: flex-end;
+  margin-top: 0.5rem;
+}
+.noBtn {
+  background: skyblue;
+  color: #fff;
+  padding: 0.1rem 1rem;
+  border-radius: 10px;
+  display: inline-block;
+  justify-self: flex-end;
+  margin-top: 0.5rem;
+}
+
+.mDiv {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  width: 380px;
+  padding: 1rem;
+  height: auto;
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+  background: #f4f4f4;
+  z-index: 100;
+  opacity: 1;
+  text-align: center;
+  display: none;
+}
+
+textarea {
+  resize: none;
+}
+
+/* TAble */
+.studentTable {
+  text-align: center;
+  margin-top: 1rem;
+  display: block;
+  overflow-y: scroll;
+  height: 700px;
+  width: 70%;
+}
+
+.studentTable th {
+  position: sticky;
+  top: 0;
+}
+
+/* Attendance Table */
+
+.attendanceTable {
+  width: 50%;
+  text-align: center;
+  display: block;
+  overflow-y: scroll;
+  height: 600px;
+  margin-bottom: 2rem;
+  margin-top: 1rem;
+}
+.attendanceTable tr {
+  border-bottom: 1px solid rgb(61, 61, 61);
+}
+
+.attendanceTable thead {
+  width: 100%;
+}
+
+.attendanceTable td {
+  padding: 0;
+  margin: 0;
+}
+.attendanceTable th {
+  position: sticky;
+  top: 0;
+  padding: 1rem 4rem;
+}
+
+.attendance-content .table {
+  height: 65vh;
+}
+
+.saveAttendanceDiv {
+  display: flex;
+  justify-content: flex-end;
+  width: 60%;
+  margin: 1rem auto;
+}
+
+/* Date n Time */
+.dateNTime {
+  text-align: center;
+}
+
+.viewALog {
+  background: rgb(0, 162, 255);
+  color: #fff;
+}
+
+/* Create ACcount page */
+.createAccountPage {
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+}
+
+.createAccountPage .left {
+  background: none;
+}
+.createAccountPage .left h1 {
+  color: #000;
+  font-size: 2rem;
+}
+.createAccountPage .left form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 80%;
+  margin: auto;
+}
+.createAccountPage .left form input {
+  margin: 0.5rem 0;
+}
+
+.createAccountPage #right {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: var(--main-color);
+  color: #fff;
+}
+
+.createBtn {
+  background: rgb(38, 231, 48);
+  color: #fff;
+  margin-top: 1rem;
+}
+
+/* studentAttendanceLogPage */
+
+#attendanceLogHeader {
+  background: var(--main-color);
+  color: #fff;
+  text-align: center;
+  font-size: 2rem;
+  padding: 1rem;
+  margin-bottom: 1rem;
+}
+
+#backToDashboardBtn {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  color: #fff;
+  font-size: 1.2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+#attendanceLogContent {
+  max-width: 1200px;
+  margin: auto;
+}
+
+.searchName {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+}
+
+.attendanceLogTable th {
+  position: sticky;
+  top: 0;
+  padding: 1rem 5rem;
+}
+
+#attendanceLogTableBody {
+  text-align: center;
+}
+
+.attendanceLogTable {
+  width: 60%;
+  text-align: center;
+  display: block;
+  overflow-y: scroll;
+  height: 650px;
+  margin-bottom: 2rem;
+  margin-top: 1rem;
+}
+
+/* Grading */
+
+#grade-container {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.gradingTable {
+  width: 85%;
+  text-align: center;
+  display: block;
+  overflow-y: scroll;
+  height: 650px;
+  margin-bottom: 2rem;
+  margin-top: 1rem;
+}
+
+.gradingTable th {
+  position: sticky;
+  top: 0;
+  padding: 1rem 5rem;
+}
+
+.selectGradingDiv {
+  margin-left: 4.7rem;
+}
+
+.select-grading {
+  width: 90%;
+  text-align: center;
+  font-size: 1.5rem;
+  background: var(--main-color);
+  color: #fff;
+}
+
+.gradingBtns {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 85%;
+  margin-left: 4.7rem;
+  margin-top: 1rem;
+}
+
+.editGrades {
+  background: rgb(38, 231, 48);
+  color: #fff;
+}
+
+.submitGrades {
+  background: rgb(0, 162, 255);
+  color: #fff;
+}
+
+.grades {
+  padding: 0.5rem;
+  width: 50%;
+  text-align: center;
+  font-size: 1.1rem;
+}
+
+/* JS INPUT VALIDATION */
+
+.form-control {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  padding-bottom: 12px;
+}
+
+.form-control i {
+  position: absolute;
+  top: 20px;
+  right: 15px;
+  visibility: hidden;
+}
+
+.form-control small {
+  visibility: hidden;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+
+.form-control.error input,
+.form-control.error textarea,
+.form-control.error select {
+  border-color: red;
+}
+
+.form-control.error i.fas.fa-exclamation-circle {
+  visibility: visible;
+  color: red;
+}
+
+.form-control.error small {
+  visibility: visible;
+  color: red;
+}
+
+/* SUBMIT STDNT BTN */
+
+.lowerActionDiv.add {
+  justify-content: right;
+}
